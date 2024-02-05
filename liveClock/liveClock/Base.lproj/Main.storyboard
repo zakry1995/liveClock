@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="liveClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rlP-Zc-dqE">
+                                <rect key="frame" x="0.0" y="267" width="393" height="318"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8vB-xW-lVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="120.66666666666667"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-ZA-0xQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="120.66666666666667"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2qu-ZA-0xQ" firstAttribute="centerY" secondItem="8vB-xW-lVu" secondAttribute="centerY" id="3td-ez-5W7"/>
+                                            <constraint firstItem="2qu-ZA-0xQ" firstAttribute="centerX" secondItem="8vB-xW-lVu" secondAttribute="centerX" id="Vh4-K1-jfK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i27-FE-h2t">
+                                        <rect key="frame" x="0.0" y="120.66666666666667" width="393" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIme Remaining: 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-L4-0dH">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yeF-L4-0dH" firstAttribute="centerX" secondItem="i27-FE-h2t" secondAttribute="centerX" id="EAT-YK-z92"/>
+                                            <constraint firstItem="yeF-L4-0dH" firstAttribute="centerY" secondItem="i27-FE-h2t" secondAttribute="centerY" id="jNm-lo-38Y"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kni-gM-dLJ">
+                                        <rect key="frame" x="0.0" y="141" width="393" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed, 28 Dec 2024 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-yh-n2N">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Dyp-yh-n2N" secondAttribute="height" multiplier="109:10" id="ign-e7-hJm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X3y-Jy-dfj">
+                                        <rect key="frame" x="0.0" y="177" width="393" height="50"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kif-e0-Ikb">
+                                        <rect key="frame" x="0.0" y="227" width="393" height="91"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start/Stop"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kni-gM-dLJ" firstAttribute="centerY" secondItem="rlP-Zc-dqE" secondAttribute="centerY" id="7fj-VK-PGu"/>
+                                    <constraint firstItem="Kni-gM-dLJ" firstAttribute="centerX" secondItem="rlP-Zc-dqE" secondAttribute="centerX" id="T0q-Yp-5b2"/>
+                                    <constraint firstItem="i27-FE-h2t" firstAttribute="centerX" secondItem="rlP-Zc-dqE" secondAttribute="centerX" id="W8c-2d-TMu"/>
+                                    <constraint firstItem="i27-FE-h2t" firstAttribute="centerY" secondItem="rlP-Zc-dqE" secondAttribute="centerY" id="XvF-f2-Xxx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rlP-Zc-dqE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AeI-bh-qWk"/>
+                            <constraint firstItem="rlP-Zc-dqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YPi-i0-7Xk"/>
+                            <constraint firstItem="rlP-Zc-dqE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eDc-1L-sGs"/>
+                            <constraint firstItem="rlP-Zc-dqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sny-cc-uRe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="kif-e0-Ikb" id="Sqx-Q0-rAR"/>
+                        <outlet property="clockLabel" destination="Dyp-yh-n2N" id="IbI-VX-t3m"/>
+                        <outlet property="countdownLabel" destination="yeF-L4-0dH" id="Pg9-ym-ebV"/>
+                        <outlet property="datePicker" destination="2qu-ZA-0xQ" id="QWs-BS-f69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
